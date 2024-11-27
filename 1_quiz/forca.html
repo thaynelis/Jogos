@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="forca.css">
+</head>
+<body>
+    <h1>Jogo da Forca</h1>
+    <div id="start-screen">
+        <button id="play-alone-btn">Jogar Sozinho</button>
+        <button id="choose-word-btn">Escolher Palavra</button>
+    </div>
+    <div id="choose-word-screen" style="display:none;">
+        <input type="text" id="custom-word" placeholder="Digite a palavra">
+        <input type="text" id="custom-hint" placeholder="Digite a dica">
+        <button id="start-game-btn">Iniciar Jogo</button>
+    </div>
+    <div id="game" style="display:none;">
+        <div id="word"></div>
+        <div id="hint"></div>
+        <div id="incorrect-letters"></div>
+        <div id="remaining-attempts"></div>
+        <img id="hangman-img" src="" alt="Forca">
+        <input type="text" id="letter-input" maxlength="1" placeholder="Digite uma letra">
+        <button id="guess-btn">Adivinhar</button>
+        <button id="new-word-btn">Nova Palavra</button>
+        <button id="exit-btn">Sair</button>
+    </div>
+    <audio id="correct-sound" src="sounds/correct.mp3"></audio>
+    <audio id="wrong-sound" src="sounds/wrong.mp3"></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+    <audio id="lose-sound" src="sounds/lose.mp3"></audio>
+    <script src="forca.js"></script>
+</body>
+</html>
